@@ -1,0 +1,12 @@
+Difference between HTTP/1.1 vs HTTP/2
+            The breaking point in HTTP/1.1 was reached well before the 2015 introduction of HTTP/2. In fact, Google was working on it’s own replacement for HTTP/1.1 since the early 2010s, called SPDY (pronounced “speedy”). This protocol used the existing infrastructure built for HTTP/1.1, but modified how the requests worked over the infrastructure. SPDY used multiplexing to download multiple resources efficiently over a single connection, and could be “back-ported” to existing applications with a translation layer.
+It makes sense that Google would take the lead on this, as they had been developing increasingly complex web-based applications that operated more like desktop applications than websites, like GMail and Google Apps. In fact, the SPDY protocol was so well-designed, w3 used it as the basis for HTTP/2.
+So, in 2015, w3 officially adopted the HTTP/2 specification based on SPDY, and all major browsers began supporting the protocol.
+Advantages Of HTTP/2:
+HTTP/2 was built over Google’s SPDY protocol with the above shortcomings of HTTP/1.1 kept in mind. The main advantages of HTTP/2 over HTTP/1.1 as pulled from their Github page are -
+
+Multiplexed, instead of ordered
+Allows using same TCP connection for multiple parallel requests
+
+Header compression using HPACK
+Compressed headers, reduced data redundancy
